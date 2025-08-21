@@ -1,3 +1,4 @@
+import Image from "next/image";
 export default function Contact() {
   return (
     <section className="w-full bg-white">
@@ -69,7 +70,7 @@ export default function Contact() {
             />
             <button
               type="submit"
-              className="mt-4 bg-[#071f43] text-white px-6 py-3 font-semibold shadow hover:bg-[#0a2859] transition"
+              className="self-start w-fit inline-flex px-6 py-3 bg-[#071f43] text-white font-['Frank_Ruhl_Libre'] text-[16px] font-semibold shadow hover:bg-[#0a2859] transition"
             >
               Contact Us Now
             </button>
@@ -81,9 +82,14 @@ export default function Contact() {
       <div className="bg-[#071f43] text-white py-4 px-6 sm:px-12 flex flex-col sm:flex-row items-center justify-between gap-4">
         {/* Left Logo */}
         <div className="flex items-center justify-center sm:justify-start w-full sm:w-auto">
-          <div className="w-24 h-6 bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-08-21/DXGodkrJFs.png)] bg-contain bg-no-repeat" />
+          <Image
+            src="/footer-logo.png"
+            alt="Blüra Logo"
+            width={96} // 24 * 4 (Tailwind rem-based width)
+            height={24} // 6 * 4
+            className="object-contain"
+          />
         </div>
-
         {/* Center Social */}
         <div className="flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto justify-center">
           <span className="text-sm">Follow us:</span>
@@ -93,7 +99,6 @@ export default function Contact() {
             <div className="w-5 h-5 bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-08-21/SFavkccuQP.png)] bg-cover" />
           </div>
         </div>
-
         {/* Right Links */}
         <div className="flex gap-8 w-full sm:w-auto justify-center sm:justify-end">
           <a href="#" className="text-sm">
