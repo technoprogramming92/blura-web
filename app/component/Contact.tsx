@@ -94,9 +94,15 @@ export default function Contact() {
         <div className="flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto justify-center">
           <span className="text-sm">Follow us:</span>
           <div className="flex gap-4">
-            <div className="w-5 h-5 bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-08-21/SNH4g6c2xs.png)] bg-cover" />
-            <div className="w-5 h-5 bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-08-21/CnuVmABEOQ.png)] bg-cover" />
-            <div className="w-5 h-5 bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-08-21/SFavkccuQP.png)] bg-cover" />
+            <a href="#">
+              <div className="w-5 h-5 bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-08-21/SNH4g6c2xs.png)] bg-cover" />
+            </a>
+            <a href="#">
+              <div className="w-5 h-5 bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-08-21/CnuVmABEOQ.png)] bg-cover" />
+            </a>
+            <a href="#">
+              <div className="w-5 h-5 bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-08-21/SFavkccuQP.png)] bg-cover" />
+            </a>
           </div>
         </div>
         {/* Right Links */}
