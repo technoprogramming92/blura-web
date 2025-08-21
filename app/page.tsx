@@ -29,12 +29,27 @@ export default function Home() {
       <ShapeResp />
       <Reason />
       {/* can after final responsive  */}
-      <Can />
+      <div className="relative w-full h-[600px] my-16 group">
+        {/* Default can */}
+        <div className="absolute inset-0 w-full h-full transition-opacity duration-500 group-hover:opacity-0">
+          <div className="w-full h-full flex items-center justify-center">
+            <Can className="max-h-full max-w-full object-contain" />
+          </div>
+        </div>
+
+        {/* Hover can */}
+        <div className="absolute inset-0 w-full h-full opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+          <div className="w-full h-full flex items-center justify-center">
+            <Can4 className="max-h-full max-w-full object-contain" />
+          </div>
+        </div>
+      </div>
+      {/* <Can /> */}
       {/* <CanBefore /> */}
       {/* <Can3 /> */}
 
       {/* can before final responsive */}
-      <Can4 />
+      {/* <Can4 /> */}
       <Faq />
       <Contact />
     </>
