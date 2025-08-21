@@ -5,9 +5,17 @@ export default function Hero() {
   return (
     <section className="relative bg-white overflow-hidden">
       {/* Navbar */}
-      <div className="flex items-center justify-between px-6 sm:px-12 py-6">
+      <div className="flex items-center justify-between !px-20 sm:px-12 py-12">
         {/* Logo */}
-        <h1 className="text-2xl font-bold text-[#0A2342]">bliira</h1>
+        {/* <h1 className="text-2xl font-bold text-[#0A2342]">bliira</h1> */}
+        {/* Logo */}
+        <Image
+          src="/blura-logo-header.png"
+          alt="Blüra Logo"
+          width={120}
+          height={40}
+          priority
+        />
 
         {/* Nav Links */}
         <nav className="hidden sm:flex gap-8 text-sm font-medium text-[#0A2342]">
@@ -17,16 +25,16 @@ export default function Hero() {
       </div>
 
       {/* Hero Content */}
-      <div className="flex flex-col-reverse lg:flex-row items-center justify-between px-6 sm:px-12 py-12 lg:py-20 gap-10">
+      <div className="flex flex-col-reverse lg:flex-row items-center justify-between !px-20 sm:px-12 py-12 lg:py-20 gap-10">
         {/* Left */}
         <div className="flex flex-col max-w-xl">
-          <h2 className="text-lg font-semibold text-[#0A2342]">
+          <h2 className="text-2xl font-semibold text-[#0A2342] font-['Frank_Ruhl_Libre']">
             For Souls That Seek Silence. Every Sip Returns You
           </h2>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0A2342] mt-2 leading-snug">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0A2342] mt-2 leading-snug font-['Frank_Ruhl_Libre']">
             TO STILLNESS, TO NATURE, TO YOU.
           </h1>
-          <p className="text-gray-600 mt-4 leading-relaxed">
+          <p className="text-gray-600 mt-4 leading-relaxed font-['Frank_Ruhl_Libre']">
             Premium natural mineral water sourced from the Himalayan foothills,
             sealed in sleek, sustainable aluminium cans.
           </p>
@@ -38,7 +46,7 @@ export default function Hero() {
         {/* Right (Can Image) */}
         <div className="relative flex justify-center lg:justify-end w-full lg:w-[45%]">
           <Image
-            src="/can.png" // replace with your image path
+            src="/hero-img.png" // replace with your image path
             alt="bliira can"
             width={350}
             height={600}
