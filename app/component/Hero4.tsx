@@ -26,7 +26,7 @@ export default function Hero4() {
 
       {/* Marquee Bar */}
       <div className="relative w-full z-10">
-        <div className="w-full bg-[#071f43] overflow-hidden mt-[-40px] lg:mt-[-80px] overflow-hidden z-20">
+        <div className="w-full bg-[#071f43] overflow-hidden mt-[-140px] lg:mt-[-80px] overflow-hidden z-20">
           <div className="flex animate-marquee whitespace-nowrap gap-12 py-4 px-6">
             {[
               "A Moment Of Clarity In a Chaotic World",

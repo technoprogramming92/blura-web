@@ -33,14 +33,16 @@ export default function Home() {
         {/* Default can */}
         <div className="absolute inset-0 w-full h-full transition-opacity duration-500 group-hover:opacity-0">
           <div className="w-full h-full flex items-center justify-center">
-            <Can className="max-h-full max-w-full object-contain" />
+            {/* <Can className="max-h-full max-w-full object-contain" /> */}
+            <Can />
           </div>
         </div>
 
         {/* Hover can */}
         <div className="absolute inset-0 w-full h-full opacity-0 transition-opacity duration-500 group-hover:opacity-100">
           <div className="w-full h-full flex items-center justify-center">
-            <Can4 className="max-h-full max-w-full object-contain" />
+            {/* <Can4 className="max-h-full max-w-full object-contain" /> */}
+            <Can4 />
           </div>
         </div>
       </div>
