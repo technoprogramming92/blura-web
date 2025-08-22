@@ -20,15 +20,18 @@ import Cursor3 from "./component/Cursor3";
 import Cursor4 from "./component/Cursor4";
 import Cursor5 from "./component/Cursor5";
 import Cursor6 from "./component/Cursor6";
+import Cursor7 from "./component/Cursor7";
 export default function Home() {
   return (
-    <div className="cursor-none">
+    <div>
       {/* <Header /> */}
       <HeaderResp />
       {/* <Hero /> */}
       {/* <Hero2 /> */}
       {/* <Hero3 /> */}
-      <Hero4 />
+      <div className="hero-section cursor-none">
+        <Hero4 />
+      </div>
       {/* <Hero3Resp /> */}
       {/* <Benefits /> */}
       <Benefits2 />
@@ -62,8 +65,9 @@ export default function Home() {
       <Contact />
       {/* <Cursor3 /> */}
       {/* <Cursor4 /> */}
-      <Cursor5 />
+      {/* <Cursor5 /> */}
       {/* <Cursor6 /> */}
+      <Cursor7 />
     </div>
   );
 }
