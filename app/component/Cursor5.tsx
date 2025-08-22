@@ -78,10 +78,25 @@ export default function MaskCursor() {
       style={{
         borderRadius: "50%",
         border: "2px solid rgba(7,31,67,0.8)",
-        backgroundColor: "#071f43",
+        // backgroundColor: "#071f43",
+        backgroundColor: "#F8E0BC",
         mixBlendMode: "difference",
       }}
       className="fixed top-0 left-0 pointer-events-none z-[9999]"
     />
+
+    // <div
+    //   ref={maskRef}
+    //   style={{
+    //     width: "40px",
+    //     height: "40px",
+    //     borderRadius: "50%",
+    //     border: "2px solid #071f43",
+    //     backgroundColor: "transparent",
+    //     backdropFilter: "invert(1)", // Inverts text behind
+    //     WebkitBackdropFilter: "invert(1)", // Safari support
+    //   }}
+    //   className="fixed top-0 left-0 pointer-events-none z-[9999]"
+    // />
   );
 }
