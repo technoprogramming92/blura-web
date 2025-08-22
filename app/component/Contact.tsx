@@ -70,7 +70,19 @@ export default function Contact() {
             />
             <button
               type="submit"
-              className="self-start w-fit inline-flex px-6 py-3 bg-[#071f43] text-white font-['Frank_Ruhl_Libre'] text-[16px] font-semibold shadow hover:bg-[#0a2859] transition"
+              className="
+    self-start w-fit inline-flex 
+    px-6 py-3 
+    bg-[#071f43] 
+    text-white 
+    font-['Frank_Ruhl_Libre'] 
+    text-[16px] font-semibold 
+    shadow 
+    border border-transparent
+    transition duration-300
+    hover:bg-transparent hover:text-[#071f43] hover:border-[#071f43] 
+    cursor-pointer
+  "
             >
               Contact Us Now
             </button>
