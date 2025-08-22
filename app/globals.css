@@ -25,7 +25,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 } */
 
-@keyframes marquee {
+/* @keyframes marquee {
   0% {
     transform: translateX(100%);
   }
@@ -37,7 +37,22 @@ body {
 .animate-marquee {
   display: inline-flex;
   animation: marquee 20s linear infinite;
+} */
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
+
+.animate-marquee {
+  display: flex;
+  animation: marquee 20s linear infinite;
+}
+
 .highlight-letter {
   position: relative;
   display: inline-block;

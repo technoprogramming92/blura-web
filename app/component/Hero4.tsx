@@ -53,10 +53,18 @@ export default function Hero4() {
       </div>
 
       {/* Marquee Bar */}
-      <div className="relative w-full z-10">
+      {/* <div className="relative w-full z-10">
         <div className="w-full bg-[#071f43] overflow-hidden mt-[-140px] lg:mt-[-80px] overflow-hidden z-20">
           <div className="flex animate-marquee whitespace-nowrap gap-12 py-4 px-6">
             {[
+              "A Moment Of Clarity In a Chaotic World",
+              "A Moment Of Clarity In a Chaotic World",
+              "A Moment Of Clarity In a Chaotic World",
+              "A Moment Of Clarity In a Chaotic World",
+              "A Moment Of Clarity In a Chaotic World",
+              "A Moment Of Clarity In a Chaotic World",
+              "A Moment Of Clarity In a Chaotic World",
+              "A Moment Of Clarity In a Chaotic World",
               "A Moment Of Clarity In a Chaotic World",
               "A Moment Of Clarity In a Chaotic World",
               "A Moment Of Clarity In a Chaotic World",
@@ -80,6 +88,39 @@ export default function Hero4() {
                     })`,
                   }}
                 />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div> */}
+      {/* Marquee Bar */}
+      <div className="relative w-full z-10">
+        <div className="w-full bg-[#071f43] overflow-hidden mt-[-140px] lg:mt-[-80px] z-20">
+          <div className="flex animate-marquee whitespace-nowrap">
+            {/* Duplicate the content twice for seamless looping */}
+            {[...Array(2)].map((_, loopIndex) => (
+              <div key={loopIndex} className="flex gap-12 py-4 px-6 shrink-0">
+                {Array.from({ length: 12 }).map((_, i) => (
+                  <div
+                    key={`${loopIndex}-${i}`}
+                    className="flex items-center gap-2 text-white text-[18px] font-medium"
+                  >
+                    <span>A Moment Of Clarity In a Chaotic World</span>
+                    <div
+                      className="w-6 h-6 bg-cover bg-no-repeat"
+                      style={{
+                        backgroundImage: `url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-08-21/${
+                          [
+                            "V64XdgD2CL.png",
+                            "NT6M5XPjxy.png",
+                            "AhT98fD6qs.png",
+                            "thqYuzu7qL.png",
+                          ][i % 4]
+                        })`,
+                      }}
+                    />
+                  </div>
+                ))}
               </div>
             ))}
           </div>
