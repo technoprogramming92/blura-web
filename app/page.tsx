@@ -21,6 +21,7 @@ import Cursor4 from "./component/Cursor4";
 import Cursor5 from "./component/Cursor5";
 import Cursor6 from "./component/Cursor6";
 import Cursor7 from "./component/Cursor7";
+import Cursor8 from "./component/Cursor8";
 export default function Home() {
   return (
     <div>
@@ -67,7 +68,10 @@ export default function Home() {
       {/* <Cursor4 /> */}
       {/* <Cursor5 /> */}
       {/* <Cursor6 /> */}
-      <Cursor7 />
+      {/* <Cursor7 /> */}
+      <Cursor8 />
+
+      {/* cursor number 5,7 and 8 working */}
     </div>
   );
 }
