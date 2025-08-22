@@ -4,6 +4,7 @@ import HeaderResp from "./component/HeaderResp";
 import Hero from "./component/Hero";
 import Hero2 from "./component/Hero2";
 import Benefits from "./component/Benifits";
+import Benefits2 from "./component/Benifits2";
 import ShapeResp from "./component/ShapeResp";
 import Reason from "./component/Reason";
 import Can from "./component/Can";
@@ -25,7 +26,8 @@ export default function Home() {
       {/* <Hero3 /> */}
       <Hero4 />
       {/* <Hero3Resp /> */}
-      <Benefits />
+      {/* <Benefits /> */}
+      <Benefits2 />
       <ShapeResp />
       <Reason />
       {/* can after final responsive  */}
