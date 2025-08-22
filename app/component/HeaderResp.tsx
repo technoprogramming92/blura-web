@@ -23,13 +23,16 @@ export default function HeaderResp() {
         <nav className="hidden lg:flex gap-8">
           <a
             href="#our-story"
-            className="font-['Frank_Ruhl_Libre'] text-[16px] font-semibold text-[#071f43]"
+            className="font-['Frank_Ruhl_Libre'] text-[16px] font-semibold text-[#071f43] px-4 py-2 transition-colors duration-300 hover:bg-[#071f43] hover:text-white"
+            onClick={() => setIsOpen(false)}
           >
             Our Story
           </a>
+
           <a
             href="#contact"
-            className="font-['Frank_Ruhl_Libre'] text-[16px] font-semibold text-[#071f43]"
+            className="font-['Frank_Ruhl_Libre'] text-[16px] font-semibold text-[#071f43] px-4 py-2 transition-colors duration-300 hover:bg-[#071f43] hover:text-white"
+            onClick={() => setIsOpen(false)}
           >
             Contact Us Now
           </a>
@@ -48,7 +51,7 @@ export default function HeaderResp() {
       {/* Mobile Dropdown */}
       {isOpen && (
         <div className="lg:hidden bg-white shadow-md absolute w-full left-0 top-[84px] flex flex-col items-center gap-4 py-6 z-50">
-          <a
+          {/* <a
             href="#our-story"
             className="font-['Frank_Ruhl_Libre'] text-[16px] font-semibold text-[#071f43]"
             onClick={() => setIsOpen(false)}
@@ -58,6 +61,22 @@ export default function HeaderResp() {
           <a
             href="#contact"
             className="font-['Frank_Ruhl_Libre'] text-[16px] font-semibold text-[#071f43]"
+            onClick={() => setIsOpen(false)}
+          >
+            Contact Us Now
+          </a> */}
+
+          <a
+            href="#our-story"
+            className="bg-transperant font-['Frank_Ruhl_Libre'] text-[16px] font-semibold text-[#071f43] px-4 py-2 rounded-md transition-colors duration-300 hover:!bg-[#071f43] hover:!text-white"
+            onClick={() => setIsOpen(false)}
+          >
+            Our Story
+          </a>
+
+          <a
+            href="#contact"
+            className="bg-transperant font-['Frank_Ruhl_Libre'] text-[16px] font-semibold text-[#071f43] px-4 py-2 rounded-md transition-colors duration-300 hover:!bg-[#071f43] hover:!text-white"
             onClick={() => setIsOpen(false)}
           >
             Contact Us Now
