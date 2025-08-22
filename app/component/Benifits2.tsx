@@ -1,7 +1,7 @@
 export default function Benefits() {
   const benefits = [
     {
-      title: "Balances Your Body&apos;s pH",
+      title: "Balances Your Body's pH",
       desc: "With a natural pH of 7-8, BLÜRA helps neutralise acidity",
       icon: "https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-08-21/JZfxUgA2iq.png",
     },
