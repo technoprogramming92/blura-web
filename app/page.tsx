@@ -16,9 +16,13 @@ import Contact from "./component/Contact";
 import Hero3 from "./component/Hero3";
 import Hero3Resp from "./component/Hero3Resp";
 import Hero4 from "./component/Hero4";
+import Cursor3 from "./component/Cursor3";
+import Cursor4 from "./component/Cursor4";
+import Cursor5 from "./component/Cursor5";
+import Cursor6 from "./component/Cursor6";
 export default function Home() {
   return (
-    <>
+    <div className="cursor-none">
       {/* <Header /> */}
       <HeaderResp />
       {/* <Hero /> */}
@@ -56,6 +60,10 @@ export default function Home() {
       {/* <Can4 /> */}
       <Faq />
       <Contact />
-    </>
+      {/* <Cursor3 /> */}
+      {/* <Cursor4 /> */}
+      <Cursor5 />
+      {/* <Cursor6 /> */}
+    </div>
   );
 }

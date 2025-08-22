@@ -14,13 +14,22 @@ export default function Hero4() {
         <HeroImg />
         {/* Left Content (order 2 in mobile) */}
         <div className="order-1 lg:order-1 flex flex-col gap-8 items-start max-w-[735px] mt-10 lg:mt-0 lg:pr-12">
-          <h1 className="font-['Frank_Ruhl_Libre'] text-[26px] sm:text-[26px] lg:text-[30px] font-semibold leading-snug text-[#071f43]">
+          <h1
+            data-hover-effect
+            className="font-['Frank_Ruhl_Libre'] text-[26px] sm:text-[26px] lg:text-[30px] font-semibold leading-snug text-[#071f43]"
+          >
             For Souls That Seek Silence Every Sip Returns You
           </h1>
-          <h1 className="font-['Frank_Ruhl_Libre'] text-[26px] sm:text-[32px] lg:text-[40px] lg:text-nowrap font-semibold leading-snug text-[#071f43]">
+          <h1
+            data-hover-effect
+            className="font-['Frank_Ruhl_Libre'] text-[26px] sm:text-[32px] lg:text-[40px] lg:text-nowrap font-semibold leading-snug text-[#071f43]"
+          >
             TO STILLNESS, TO NATURE, TO YOU.
           </h1>
-          <p className="text-[16px] sm:text-[18px] font-light leading-7 text-gray-600">
+          <p
+            data-hover-effect
+            className="text-[16px] sm:text-[18px] font-light leading-7 text-gray-600"
+          >
             Premium natural mineral water sourced from the Himalayan foothills,
             sealed in sleek, sustainable aluminium cans.
           </p>
@@ -35,8 +44,7 @@ export default function Hero4() {
   shadow 
   border border-transparent
   transition duration-300
-  hover:bg-transparent hover:text-[#071f43] hover:border-[#071f43]
-  cursor-pointer
+  hover:bg-transparent hover:text-[#071f43] hover:border-[#071f43] cursor-pointer
 "
           >
             Elevate Your Hydration
