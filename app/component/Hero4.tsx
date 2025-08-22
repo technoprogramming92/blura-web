@@ -1,10 +1,17 @@
+import Hero from "./Hero";
+import HeroImg from "./HeroImg";
 export default function Hero4() {
   return (
     <section className="w-full bg-white overflow-hidden">
       <div className="max-w-[1460px] relative mx-auto flex flex-col lg:flex-row items-center justify-between px-6 lg:px-12">
         {/* Right Image (order 1 in mobile, stays right in desktop) */}
-        <div className="order-2 lg:order-2 w-full lg:w-[560px] h-[400px] lg:h-[634px] bg-[url('https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-08-21/NE1XZKpKVi.png')] bg-cover bg-no-repeat lg:self-end lg:translate-y-12 z-0" />
-
+        {/* <div className="order-2 lg:order-2 w-full lg:w-[560px] h-[400px] lg:h-[634px] bg-[url('https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-08-21/NE1XZKpKVi.png')] bg-cover bg-no-repeat lg:self-end lg:translate-y-12 z-0" /> */}
+        {/* <img
+          src="https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-08-21/NE1XZKpKVi.png"
+          alt="Hero Image"
+          className="order-2 lg:order-2 w-full lg:w-[560px] h-[400px] lg:h-[634px] object-cover lg:self-end lg:translate-y-12 z-0"
+        /> */}
+        <HeroImg />
         {/* Left Content (order 2 in mobile) */}
         <div className="order-1 lg:order-1 flex flex-col gap-8 items-start max-w-[735px] mt-10 lg:mt-0 lg:pr-12">
           <h1 className="font-['Frank_Ruhl_Libre'] text-[26px] sm:text-[26px] lg:text-[30px] font-semibold leading-snug text-[#071f43]">
@@ -18,7 +25,20 @@ export default function Hero4() {
             sealed in sleek, sustainable aluminium cans.
           </p>
 
-          <button className="px-6 py-3 bg-[#071f43] text-white font-['Frank_Ruhl_Libre'] text-[16px] font-semibold shadow hover:bg-[#0a2859] transition">
+          <button
+            className="
+  px-6 py-3 
+  bg-[#071f43] 
+  text-white 
+  font-['Frank_Ruhl_Libre'] 
+  text-[16px] font-semibold 
+  shadow 
+  border border-transparent
+  transition duration-300
+  hover:bg-transparent hover:text-[#071f43] hover:border-[#071f43]
+  cursor-pointer
+"
+          >
             Elevate Your Hydration
           </button>
         </div>
