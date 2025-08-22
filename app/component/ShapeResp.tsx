@@ -10,7 +10,7 @@ export default function Shape() {
 
         {/* Subtitle */}
         <p className="font-['Frank_Ruhl_Libre'] text-base sm:text-lg lg:text-[18px] font-semibold text-white text-center">
-          At blüra, we don’t just bottled water, we Canned clarity.
+          At blüra, we don&apos;t just bottled water, we Canned clarity.
         </p>
 
         {/* Description */}
@@ -29,7 +29,7 @@ export default function Shape() {
           naturally filtered water that flows through Himalayan rocks,
           containing elements such as calcium, magnesium, and bicarbonates, that
           not only hydrate but also revitalise. No chemicals. No gimmicks. Just
-          the earth’s wisdom in a Can.
+          the earth&apos;s wisdom in a Can.
         </p>
       </div>
     </section>

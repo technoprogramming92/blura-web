@@ -13,7 +13,7 @@ export default function Reason() {
           <p className="font-['Frank_Ruhl_Libre'] text-sm sm:text-base lg:text-[18px] font-light leading-relaxed text-black text-left">
             Not Just Canned. We Considered.
             <br />
-            We didn’t go plastic-free because it was trendy. We went
+            We didn&apos;t go plastic-free because it was trendy. We went
             plastic-free because it was a necessity.
             <br />
             <br />

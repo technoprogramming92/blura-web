@@ -10,10 +10,10 @@ export default function CanBafore() {
             Drink like it means Something! <br /> <br />
           </span>
           <span className="font-['Frank_Ruhl_Libre'] text-[14px] md:text-[16px] lg:text-[18px] font-light leading-[18px] md:leading-[20px] lg:leading-[22.68px] text-[#fff] relative text-center">
-            blüra doesn’t shock your tongue or leave an afterthought. It simply
-            disappears, as if it were always part of you. It nourishes without
-            asking for attention. No artificial mineral addition, free of
-            impurities, blüra is natural alkaline water that is soft on the
+            blüra doesn&apos;t shock your tongue or leave an afterthought. It
+            simply disappears, as if it were always part of you. It nourishes
+            without asking for attention. No artificial mineral addition, free
+            of impurities, blüra is natural alkaline water that is soft on the
             palate and gentle on your body.{" "}
           </span>
         </div>
