@@ -1,7 +1,10 @@
 // Shape.tsx
 export default function Shape() {
   return (
-    <section className="w-full bg-white py-16 px-4 sm:px-8 lg:px-12">
+    <section
+      className="w-full bg-white py-16 px-4 sm:px-8 lg:px-12"
+      id="our-story"
+    >
       <div className="max-w-[1276px] mx-auto bg-[#071f43] rounded-lg px-6 sm:px-12 lg:px-[91px] py-12 flex flex-col gap-6">
         {/* Title */}
         <h2 className="font-['Frank_Ruhl_Libre'] text-3xl sm:text-4xl lg:text-[54px] font-medium leading-tight text-white text-center">

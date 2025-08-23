@@ -87,7 +87,7 @@ export default function MaskCursor() {
         backgroundColor: "#F8E0BC", // your calculated color
         mixBlendMode: "difference",
       }}
-      className="fixed top-0 left-0 pointer-events-none z-[9999]"
+      className="hidden sm:block fixed top-0 left-0 pointer-events-none z-[9999]"
     />
   );
 }

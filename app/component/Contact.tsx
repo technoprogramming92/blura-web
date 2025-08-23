@@ -1,7 +1,7 @@
 import Image from "next/image";
 export default function Contact() {
   return (
-    <section className="w-full bg-white">
+    <section className="w-full bg-white" id="contact">
       {/* Top Section */}
       <div className="flex flex-col lg:flex-row w-full">
         {/* Left Info */}
