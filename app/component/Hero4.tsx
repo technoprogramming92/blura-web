@@ -1,6 +1,78 @@
+"use client";
+
+import { useEffect } from "react";
+import { gsap } from "gsap";
+
 import Hero from "./Hero";
 import HeroImg from "./HeroImg";
 export default function Hero4() {
+  const words = ["STILLNESS", "NATURE", "YOU"];
+
+  useEffect(() => {
+    const wordElement = document.getElementById("changing-word");
+    let index = 0;
+
+    const typeWord = (word: string) => {
+      if (!wordElement) return;
+      wordElement.textContent = "";
+
+      const letters = word.split("");
+      letters.forEach((letter, i) => {
+        gsap.to(
+          {},
+          {
+            delay: i * 0.08,
+            onComplete: () => {
+              if (wordElement) {
+                wordElement.textContent += letter;
+              }
+            },
+          }
+        );
+      });
+    };
+
+    const eraseWord = (callback: () => void) => {
+      if (!wordElement) return;
+      const currentText = wordElement.textContent || "";
+      const letters = currentText.split("");
+
+      letters.forEach((_, i) => {
+        gsap.to(
+          {},
+          {
+            delay: i * 0.05,
+            onComplete: () => {
+              if (wordElement) {
+                wordElement.textContent = currentText.slice(
+                  0,
+                  letters.length - i - 1
+                );
+              }
+              if (i === letters.length - 1 && callback) {
+                callback();
+              }
+            },
+          }
+        );
+      });
+    };
+
+    const changeWord = () => {
+      eraseWord(() => {
+        index = (index + 1) % words.length;
+        typeWord(words[index]);
+      });
+    };
+
+    // Start typing first word
+    typeWord(words[index]);
+
+    const interval = setInterval(changeWord, 4000); // Every 4 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="w-full bg-white overflow-hidden">
       <div className="max-w-[1460px] relative mx-auto flex flex-col lg:flex-row items-center justify-between px-6 lg:px-12">
@@ -20,12 +92,18 @@ export default function Hero4() {
           >
             For Souls That Seek Silence Every Sip Returns You
           </h1>
-          <h1
+          {/* <h1
             data-hover-effect
             className="font-['Frank_Ruhl_Libre'] text-[26px] sm:text-[32px] lg:text-[40px] lg:text-nowrap font-semibold leading-snug text-[#071f43]"
           >
             TO STILLNESS, TO NATURE, TO YOU.
+          </h1> */}
+
+          <h1 className="font-['Frank_Ruhl_Libre'] text-[26px] sm:text-[32px] lg:text-[40px] font-semibold leading-snug text-[#071f43] flex items-center gap-2">
+            TO <span id="changing-word" className="inline-block"></span>
+            {/* <span className="blinking-cursor">|</span> */}
           </h1>
+
           <p
             data-hover-effect
             className="text-[16px] sm:text-[18px] font-light leading-7 text-gray-600"
