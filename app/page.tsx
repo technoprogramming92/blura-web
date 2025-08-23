@@ -42,9 +42,9 @@ export default function Home() {
       {/* can after final responsive  */}
       <div className="relative w-full h-[600px] my-16 group">
         {/* Default can */}
-        <div className="hidden sm:block absolute inset-0 w-full h-full transition-opacity duration-[2000ms] group-hover:opacity-0">
+
+        <div className="hidden lg:block absolute inset-0 w-full h-full transition-opacity duration-[2000ms] group-hover:opacity-0">
           <div className="w-full h-full flex items-center justify-center">
-            {/* <Can className="max-h-full max-w-full object-contain" /> */}
             <Can />
           </div>
         </div>
