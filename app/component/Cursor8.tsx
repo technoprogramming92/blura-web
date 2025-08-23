@@ -1,12 +1,14 @@
 "use client";
 
+"use client";
+
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 
 export default function MaskCursor() {
   const maskRef = useRef<HTMLDivElement | null>(null);
-  const normalSize = 20; // small bubble
-  const hoverSize = 70; // enlarged bubble
+  const normalSize = 20;
+  const hoverSize = 70;
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -25,6 +27,21 @@ export default function MaskCursor() {
       opacity: 1,
     });
 
+    // Helper to convert rgb to hex
+    const rgbToHex = (rgb: string) => {
+      const rgbValues = rgb.match(/\d+/g);
+      if (!rgbValues) return "#ffffff";
+      return (
+        "#" +
+        rgbValues
+          .map((x) => {
+            const hex = parseInt(x).toString(16);
+            return hex.length === 1 ? "0" + hex : hex;
+          })
+          .join("")
+      );
+    };
+
     // Move cursor
     const onMove = (e: MouseEvent) => {
       gsap.to(mask, {
@@ -39,23 +56,40 @@ export default function MaskCursor() {
     const onHover = (e: MouseEvent) => {
       const element = e.target as HTMLElement | null;
 
-      // If hovering on buttons or inputs → show normal cursor
       if (element?.closest("button, input, textarea, select, img")) {
         document.documentElement.style.cursor = "auto";
         gsap.to(mask, { opacity: 0, duration: 0.2 });
         return;
       }
 
-      // Always hide default cursor elsewhere
       document.documentElement.style.cursor = "none";
       gsap.to(mask, { opacity: 1, duration: 0.2 });
 
-      // Enlarge on headings
+      // **Dynamic background color detection**
+      const computedColor = window.getComputedStyle(element)?.color;
+      const hexColor = rgbToHex(computedColor).toLowerCase();
+
+      // Simple condition: if text is blueish (#071f43 in your case), make mask white
+      let maskColor = "#F8E0BC"; // default
+      let maskTextColor = "#000000"; // default text color
+      if (hexColor === "#071f43") {
+        maskColor = "#F8E0BC";
+      } else if (hexColor === "#ffffff") {
+        maskColor = "#ffffffb3";  ///ffffffb3
+      }
+
+      gsap.to(mask, {
+        backgroundColor: maskColor,
+        color: maskTextColor,
+        duration: 0.2,
+      });
+
+      // Size change on headings
       if (element && /^(H[1-6])$/.test(element.tagName)) {
         gsap.to(mask, {
           width: hoverSize,
           height: hoverSize,
-          duration: 0.35, // smooth transition
+          duration: 0.35,
           ease: "power3.out",
         });
       } else {
@@ -68,7 +102,6 @@ export default function MaskCursor() {
       }
     };
 
-    // Event listeners
     window.addEventListener("mousemove", onMove);
     document.addEventListener("mouseover", onHover);
 
@@ -84,7 +117,7 @@ export default function MaskCursor() {
       ref={maskRef}
       style={{
         borderRadius: "50%",
-        backgroundColor: "#F8E0BC", // your calculated color
+        // backgroundColor: "#F8E0BC",
         mixBlendMode: "difference",
       }}
       className="hidden sm:block fixed top-0 left-0 pointer-events-none z-[9999]"
