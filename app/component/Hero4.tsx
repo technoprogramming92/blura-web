@@ -8,70 +8,88 @@ import HeroImg from "./HeroImg";
 export default function Hero4() {
   const words = ["STILLNESS", "NATURE", "YOU"];
 
-  useEffect(() => {
-    const wordElement = document.getElementById("changing-word");
-    let index = 0;
+useEffect(() => {
+  const wordElement = document.getElementById("changing-word");
+  let index = 0;
+  let interval: NodeJS.Timeout | null = null;
 
-    const typeWord = (word: string) => {
-      if (!wordElement) return;
-      wordElement.textContent = "";
+  const typeWord = (word: string) => {
+    if (!wordElement) return;
+    wordElement.textContent = "";
 
-      const letters = word.split("");
-      letters.forEach((letter, i) => {
-        gsap.to(
-          {},
-          {
-            delay: i * 0.08,
-            onComplete: () => {
-              if (wordElement) {
-                wordElement.textContent += letter;
-              }
-            },
+    const letters = word.split("");
+    letters.forEach((letter, i) => {
+      gsap.to({}, {
+        delay: i * 0.08,
+        onComplete: () => {
+          if (wordElement) {
+            wordElement.textContent += letter;
           }
-        );
+        }
       });
-    };
+    });
+  };
 
-    const eraseWord = (callback: () => void) => {
-      if (!wordElement) return;
-      const currentText = wordElement.textContent || "";
-      const letters = currentText.split("");
+  const eraseWord = (callback: () => void) => {
+    if (!wordElement) return;
+    const currentText = wordElement.textContent || "";
+    const letters = currentText.split("");
 
-      letters.forEach((_, i) => {
-        gsap.to(
-          {},
-          {
-            delay: i * 0.05,
-            onComplete: () => {
-              if (wordElement) {
-                wordElement.textContent = currentText.slice(
-                  0,
-                  letters.length - i - 1
-                );
-              }
-              if (i === letters.length - 1 && callback) {
-                callback();
-              }
-            },
+    letters.forEach((_, i) => {
+      gsap.to({}, {
+        delay: i * 0.05,
+        onComplete: () => {
+          if (wordElement) {
+            wordElement.textContent = currentText.slice(0, letters.length - i - 1);
           }
-        );
+          if (i === letters.length - 1 && callback) {
+            callback();
+          }
+        }
       });
-    };
+    });
+  };
 
-    const changeWord = () => {
-      eraseWord(() => {
-        index = (index + 1) % words.length;
-        typeWord(words[index]);
-      });
-    };
+  const changeWord = () => {
+    eraseWord(() => {
+      index = (index + 1) % words.length;
+      typeWord(words[index]);
+    });
+  };
 
-    // Start typing first word
-    typeWord(words[index]);
+  const startInterval = () => {
+    if (!interval) {
+      interval = setInterval(changeWord, 4000);
+    }
+  };
 
-    const interval = setInterval(changeWord, 4000); // Every 4 seconds
+  const clearExistingInterval = () => {
+    if (interval) {
+      clearInterval(interval);
+      interval = null;
+    }
+  };
 
-    return () => clearInterval(interval);
-  }, []);
+  const handleVisibilityChange = () => {
+    if (document.visibilityState === "visible") {
+      startInterval();
+    } else {
+      clearExistingInterval();
+    }
+  };
+
+  // Initial run
+  typeWord(words[index]);
+  startInterval();
+
+  // Listen to tab visibility changes
+  document.addEventListener("visibilitychange", handleVisibilityChange);
+
+  return () => {
+    clearExistingInterval();
+    document.removeEventListener("visibilitychange", handleVisibilityChange);
+  };
+}, []);
 
   return (
     <section className="w-full bg-white overflow-hidden">
