@@ -25,7 +25,7 @@ import Cursor8 from "./component/Cursor8";
 import Can2 from "./component/Can2";
 export default function Home() {
   return (
-    <div>
+    <div className="overflow-x-hidden">
       {/* <Header /> */}
       <HeaderResp />
       {/* <Hero /> */}
@@ -55,12 +55,22 @@ export default function Home() {
             <Can4 />
           </div>
 
-          <div className="lg:hidden w-full h-full flex items-center justify-center" style={{ height: "600px", width: "1094px", backgroundColor: "#071f43" }}>
+          <div
+            className="lg:hidden w-full h-full flex items-center justify-center"
+            style={{
+              height: "600px",
+              width: "1094px",
+              backgroundColor: "#071f43",
+            }}
+          >
             <Can2 />
           </div>
         </div>
 
-        <div className="lg:hidden w-full h-full flex items-center justify-center" style={{ height: "600px", backgroundColor: "#071f43" }}>
+        <div
+          className="lg:hidden w-full h-full flex items-center justify-center"
+          style={{ height: "600px", backgroundColor: "#071f43" }}
+        >
           <Can2 />
         </div>
       </div>
