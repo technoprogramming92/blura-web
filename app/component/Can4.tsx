@@ -86,7 +86,7 @@ export default function CanBafore() {
   return (
     <div
       ref={sectionRef}
-      className="main-container flex w-full max-w-[1276px] min-h-[232px] md:min-h-[337px] lg:min-h-[463px] xl:min-h-[549px] flex-col gap-4 md:gap-6 lg:gap-[26px] items-center flex-nowrap bg-[#071f43] relative overflow-hidden mx-auto my-0"
+      className="main-container flex h-[600px]! w-full max-w-[1276px] min-h-[232px] md:min-h-[337px] lg:min-h-[463px] xl:min-h-[549px] flex-col gap-4 md:gap-6 lg:gap-[26px] items-center flex-nowrap bg-[#071f43] relative overflow-hidden mx-auto my-0"
     >
       <div className="flex pt-[30px] md:pt-[50px] lg:pt-[72px] pr-[20px] md:pr-[50px] lg:pr-[91px] pb-0 pl-[20px] md:pl-[50px] lg:pl-[91px] flex-col gap-[10px] md:gap-[17px] items-center self-stretch shrink-0 flex-nowrap relative">
         <span

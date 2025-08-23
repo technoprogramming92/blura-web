@@ -82,7 +82,7 @@ export default function Can() {
     <section className="w-full bg-white py-16 px-0">
       <div
         ref={containerRef}
-        className="w-full max-w-[1276px] h-[549px] bg-[#071f43] mx-auto flex items-center justify-center relative overflow-hidden"
+        className="w-full max-w-[1276px]  h-[600px] h-[549px] bg-[#071f43] mx-auto flex items-center justify-center relative overflow-hidden"
       >
         {/* Back can */}
         <div

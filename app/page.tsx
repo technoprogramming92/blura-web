@@ -50,9 +50,8 @@ export default function Home() {
         </div>
 
         {/* Hover can */}
-        <div className="absolute inset-0 w-full h-full opacity-0 transition-opacity duration-[2000ms] group-hover:opacity-100">
-          {/* <!-- Desktop Component --> */}
-          <div className="hidden md:block text-white p-6 text-center">
+        <div className="absolute inset-0 w-full h-[600px]! opacity-0 transition-opacity duration-[2000ms] group-hover:opacity-100">
+          <div className="hidden md:block text-white text-center md:h-[600px]!">
             <Can4 />
           </div>
 
