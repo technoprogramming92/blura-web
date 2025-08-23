@@ -17,7 +17,13 @@ export default function MaskCursor() {
     const prevCursor = document.documentElement.style.cursor;
 
     // Initial setup
-    gsap.set(mask, { width: normalSize, height: normalSize, x: -100, y: -100, opacity: 1 });
+    gsap.set(mask, {
+      width: normalSize,
+      height: normalSize,
+      x: -100,
+      y: -100,
+      opacity: 1,
+    });
 
     // Move cursor
     const onMove = (e: MouseEvent) => {
@@ -34,7 +40,7 @@ export default function MaskCursor() {
       const element = e.target as HTMLElement | null;
 
       // If hovering on buttons or inputs → show normal cursor
-      if (element?.closest("button, input, textarea, select")) {
+      if (element?.closest("button, input, textarea, select, img")) {
         document.documentElement.style.cursor = "auto";
         gsap.to(mask, { opacity: 0, duration: 0.2 });
         return;
