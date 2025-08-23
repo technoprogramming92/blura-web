@@ -101,7 +101,7 @@ export default function CanBafore() {
         </span>
         <div
           ref={paraRef}
-          className="w-full max-w-[1276px] shrink-0 font-['Plus_Jakarta_Sans'] text-[14px] md:text-[16px] lg:text-[18px] font-bold leading-[18px] md:leading-[20px] lg:leading-[22.68px] relative text-center z-[2]"
+          className="w-full max-w-[952px] shrink-0 font-['Plus_Jakarta_Sans'] text-[14px] md:text-[16px] lg:text-[18px] font-bold leading-[18px] md:leading-[20px] lg:leading-[22.68px] relative text-center z-[2]"
         >
           <span className="font-['Frank_Ruhl_Libre'] text-[14px] md:text-[16px] lg:text-[18px] font-bold leading-[18px] md:leading-[20px] lg:leading-[22.68px] text-[#fff] relative text-center">
             Drink like it means Something! <br /> <br />
@@ -116,16 +116,7 @@ export default function CanBafore() {
         </div>
       </div>
 
-      {/* Image 1 */}
-      <div
-        ref={img1Ref}
-        className="w-[40.45%] h-[220px] md:h-[320px] lg:h-[440px] xl:h-[521.667px] shrink-0 bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-08-21/zPvJ0zWqvS.png)] bg-contain bg-center bg-no-repeat absolute top-[90px] md:top-[140px] lg:top-[190px] xl:top-[227px] left-[68.18%] z-[4]"
-      />
-      {/* Image 2 */}
-      <div
-        ref={img2Ref}
-        className="w-[32.84%] h-[200px] md:h-[300px] lg:h-[400px] xl:h-[484.686px] shrink-0 bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-08-21/VV84h7H9c8.png)] bg-contain bg-center bg-no-repeat absolute top-[100px] md:top-[150px] lg:top-[200px] xl:top-[246px] left-[-1.49%] z-[3]"
-      />
+    
     </div>
   );
 }

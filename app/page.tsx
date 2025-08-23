@@ -22,6 +22,7 @@ import Cursor5 from "./component/Cursor5";
 import Cursor6 from "./component/Cursor6";
 import Cursor7 from "./component/Cursor7";
 import Cursor8 from "./component/Cursor8";
+import Can2 from "./component/Can2";
 export default function Home() {
   return (
     <div>
@@ -41,7 +42,7 @@ export default function Home() {
       {/* can after final responsive  */}
       <div className="relative w-full h-[600px] my-16 group">
         {/* Default can */}
-        <div className="absolute inset-0 w-full h-full transition-opacity duration-[1000ms] group-hover:opacity-0">
+        <div className="hidden sm:block absolute inset-0 w-full h-full transition-opacity duration-[2000ms] group-hover:opacity-0">
           <div className="w-full h-full flex items-center justify-center">
             {/* <Can className="max-h-full max-w-full object-contain" /> */}
             <Can />
@@ -49,11 +50,19 @@ export default function Home() {
         </div>
 
         {/* Hover can */}
-        <div className="absolute inset-0 w-full h-full opacity-0 transition-opacity duration-[1000ms] group-hover:opacity-100">
-          <div className="w-full h-full flex items-center justify-center">
-            {/* <Can4 className="max-h-full max-w-full object-contain" /> */}
+        <div className="absolute inset-0 w-full h-full opacity-0 transition-opacity duration-[2000ms] group-hover:opacity-100">
+          {/* <!-- Desktop Component --> */}
+          <div className="hidden md:block text-white p-6 text-center">
             <Can4 />
           </div>
+
+          <div className="lg:hidden w-full h-full flex items-center justify-center" style={{ height: "600px", width: "1094px", backgroundColor: "#071f43" }}>
+            <Can2 />
+          </div>
+        </div>
+
+        <div className="lg:hidden w-full h-full flex items-center justify-center" style={{ height: "600px", backgroundColor: "#071f43" }}>
+          <Can2 />
         </div>
       </div>
 
