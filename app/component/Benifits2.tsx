@@ -1,3 +1,10 @@
+"use client";
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 export default function Benefits() {
   const benefits = [
     {
@@ -22,6 +29,28 @@ export default function Benefits() {
     },
   ];
 
+  const cardsRef = useRef<HTMLDivElement[]>([]);
+
+  useEffect(() => {
+    if (!cardsRef.current.length) return;
+
+    gsap.fromTo(
+      cardsRef.current,
+      { y: 80, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power3.out",
+        stagger: 0.2,
+        scrollTrigger: {
+          trigger: cardsRef.current[0].parentElement,
+          start: "top 80%",
+        },
+      }
+    );
+  }, []);
+
   return (
     <section className="w-full bg-white py-16 px-6">
       {/* Heading */}
@@ -34,7 +63,10 @@ export default function Benefits() {
         {benefits.map((item, i) => (
           <div
             key={i}
-            className="group bg-white rounded-xl shadow-md hover:shadow-lg transition p-6 flex flex-col gap-4 hover:bg-[#071f43] cursor-pointer"
+            ref={(el) => {
+              if (el) cardsRef.current[i] = el;
+            }}
+            className="group bg-white rounded-xl shadow-md hover:shadow-lg transition p-6 flex flex-col gap-4 hover:bg-[#071f43] cursor-pointer opacity-0"
           >
             <img
               src={item.icon}

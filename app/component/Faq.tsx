@@ -1,5 +1,9 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Faq() {
   const faqs = [
@@ -23,15 +27,63 @@ export default function Faq() {
 
   const [activeIndex, setActiveIndex] = useState(1); // 2nd accordion open by default
 
+  const sectionRef = useRef<HTMLDivElement | null>(null);
+  const titleRef = useRef<HTMLDivElement | null>(null);
+  const faqRefs = useRef<HTMLDivElement[]>([]);
+
   const toggleAccordion = (index: number) => {
     setActiveIndex(activeIndex === index ? -1 : index);
   };
 
+  useEffect(() => {
+    if (!sectionRef.current) return;
+
+    const ctx = gsap.context(() => {
+      // Title animation
+      gsap.fromTo(
+        titleRef.current,
+        { x: -50, opacity: 0 },
+        {
+          x: 0,
+          opacity: 1,
+          duration: 1,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top 80%",
+          },
+        }
+      );
+
+      // FAQ items stagger animation
+      gsap.fromTo(
+        faqRefs.current,
+        { y: 50, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.8,
+          stagger: 0.2,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top 80%",
+          },
+        }
+      );
+    }, sectionRef);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <section className="w-full bg-white py-16 px-4 sm:px-8">
+    <section
+      ref={sectionRef}
+      className="w-full bg-white py-16 px-4 sm:px-8"
+    >
       <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-12">
         {/* Left Title */}
-        <div className="flex-1">
+        <div className="flex-1" ref={titleRef}>
           <h2 className="font-['Frank_Ruhl_Libre'] text-3xl sm:text-4xl lg:text-5xl font-bold text-black leading-tight">
             Answers, as Clear as Blüra Water
           </h2>
@@ -42,6 +94,9 @@ export default function Faq() {
           {faqs.map((item, i) => (
             <div
               key={i}
+              ref={(el) => {
+                if (el) faqRefs.current[i] = el;
+              }}
               className={`rounded-md transition overflow-hidden ${
                 activeIndex === i
                   ? "bg-[#071f43] text-white"

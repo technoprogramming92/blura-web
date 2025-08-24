@@ -1,11 +1,65 @@
+"use client";
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
+
+gsap.registerPlugin(ScrollTrigger);
+
 export default function Contact() {
+  const sectionRef = useRef<HTMLDivElement | null>(null);
+  const leftRef = useRef<HTMLDivElement | null>(null);
+  const rightRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (!sectionRef.current) return;
+
+    const ctx = gsap.context(() => {
+      // Left info animates from left
+      gsap.fromTo(
+        leftRef.current,
+        { x: -100, opacity: 0 },
+        {
+          x: 0,
+          opacity: 1,
+          duration: 1.2,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top 80%",
+          },
+        }
+      );
+
+      // Right form animates from right
+      gsap.fromTo(
+        rightRef.current,
+        { x: 100, opacity: 0 },
+        {
+          x: 0,
+          opacity: 1,
+          duration: 1.2,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top 80%",
+          },
+        }
+      );
+    }, sectionRef);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <section className="w-full bg-white" id="contact">
+    <section ref={sectionRef} className="w-full bg-white" id="contact">
       {/* Top Section */}
       <div className="flex flex-col lg:flex-row w-full">
         {/* Left Info */}
-        <div className="bg-[#071f43] text-white px-6 sm:px-12 lg:px-24 py-12 flex-1 flex flex-col gap-6">
+        <div
+          ref={leftRef}
+          className="bg-[#071f43] text-white px-6 sm:px-12 lg:px-24 py-12 flex-1 flex flex-col gap-6"
+        >
           <h2 className="font-['Frank_Ruhl_Libre'] text-3xl sm:text-4xl font-bold capitalize">
             be a blüra being
           </h2>
@@ -32,7 +86,10 @@ export default function Contact() {
         </div>
 
         {/* Right Form */}
-        <div className="bg-white px-6 sm:px-12 lg:px-24 py-12 flex-1">
+        <div
+          ref={rightRef}
+          className="bg-white px-6 sm:px-12 lg:px-24 py-12 flex-1"
+        >
           <h3 className="text-2xl font-['Frank_Ruhl_Libre'] mb-2">
             Have Questions? Let’s Connect!
           </h3>
@@ -70,19 +127,7 @@ export default function Contact() {
             />
             <button
               type="submit"
-              className="
-    self-start w-fit inline-flex 
-    px-6 py-3 
-    bg-[#071f43] 
-    text-white 
-    font-['Frank_Ruhl_Libre'] 
-    text-[16px] font-semibold 
-    shadow 
-    border border-transparent
-    transition duration-300
-    hover:bg-transparent hover:text-[#071f43] hover:border-[#071f43] 
-    cursor-pointer
-  "
+              className="self-start w-fit inline-flex px-6 py-3 bg-[#071f43] text-white font-['Frank_Ruhl_Libre'] text-[16px] font-semibold shadow border border-transparent transition duration-300 hover:bg-transparent hover:text-[#071f43] hover:border-[#071f43] cursor-pointer"
             >
               Contact Us Now
             </button>
@@ -97,8 +142,8 @@ export default function Contact() {
           <Image
             src="/footer-logo.png"
             alt="Blüra Logo"
-            width={96} // 24 * 4 (Tailwind rem-based width)
-            height={24} // 6 * 4
+            width={96}
+            height={24}
             className="object-contain"
           />
         </div>

@@ -1,9 +1,43 @@
 // Shape.tsx
+"use client";
+
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 export default function Shape() {
+  const sectionRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (!sectionRef.current) return;
+
+    gsap.fromTo(
+      sectionRef.current,
+      {
+        y: 100,         // start slightly below
+        opacity: 0,     // start invisible
+      },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1.2,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top 80%",   // when 80% of viewport reached
+          toggleActions: "play none none reverse", 
+        },
+      }
+    );
+  }, []);
+
   return (
     <section
       className="w-full bg-white py-16 px-4 sm:px-8 lg:px-12"
       id="our-story"
+      ref={sectionRef}
     >
       <div className="max-w-[1276px] mx-auto bg-[#071f43] rounded-lg px-6 sm:px-12 lg:px-[91px] py-12 flex flex-col gap-6">
         {/* Title */}
