@@ -27,20 +27,20 @@ export default function MaskCursor() {
       opacity: 1,
     });
 
-    // Helper to convert rgb to hex
-    const rgbToHex = (rgb: string) => {
-      const rgbValues = rgb.match(/\d+/g);
-      if (!rgbValues) return "#ffffff";
-      return (
-        "#" +
-        rgbValues
-          .map((x) => {
-            const hex = parseInt(x).toString(16);
-            return hex.length === 1 ? "0" + hex : hex;
-          })
-          .join("")
-      );
-    };
+    // // Helper to convert rgb to hex
+    // const rgbToHex = (rgb: string) => {
+    //   const rgbValues = rgb.match(/\d+/g);
+    //   if (!rgbValues) return "#ffffff";
+    //   return (
+    //     "#" +
+    //     rgbValues
+    //       .map((x) => {
+    //         const hex = parseInt(x).toString(16);
+    //         return hex.length === 1 ? "0" + hex : hex;
+    //       })
+    //       .join("")
+    //   );
+    // };
 
     // Move cursor
     const onMove = (e: MouseEvent) => {
@@ -65,24 +65,24 @@ export default function MaskCursor() {
       document.documentElement.style.cursor = "none";
       gsap.to(mask, { opacity: 1, duration: 0.2 });
 
-      // **Dynamic background color detection**
-      const computedColor = window.getComputedStyle(element)?.color;
-      const hexColor = rgbToHex(computedColor).toLowerCase();
+      // // **Dynamic background color detection**
+      // const computedColor = window.getComputedStyle(element)?.color;
+      // const hexColor = rgbToHex(computedColor).toLowerCase();
 
-      // Simple condition: if text is blueish (#071f43 in your case), make mask white
-      let maskColor = "#F8E0BC"; // default
-      let maskTextColor = "#000000"; // default text color
-      if (hexColor === "#071f43") {
-        maskColor = "#F8E0BC";
-      } else if (hexColor === "#ffffff") {
-        maskColor = "#ffffffb3";  ///ffffffb3
-      }
+      // // Simple condition: if text is blueish (#071f43 in your case), make mask white
+      // let maskColor = "#F8E0BC"; // default
+      // let maskTextColor = "#000000"; // default text color
+      // if (hexColor === "#071f43") {
+      //   maskColor = "#F8E0BC";
+      // } else if (hexColor === "#ffffff") {
+      //   maskColor = "#ffffffb3";  ///ffffffb3
+      // }
 
-      gsap.to(mask, {
-        backgroundColor: maskColor,
-        color: maskTextColor,
-        duration: 0.2,
-      });
+      // gsap.to(mask, {
+      //   backgroundColor: maskColor,
+      //   color: maskTextColor,
+      //   duration: 0.2,
+      // });
 
       // Size change on headings
       if (element && /^(H[1-6])$/.test(element.tagName)) {
@@ -117,7 +117,7 @@ export default function MaskCursor() {
       ref={maskRef}
       style={{
         borderRadius: "50%",
-        // backgroundColor: "#F8E0BC",
+        backgroundColor: "#FFFFFF",
         mixBlendMode: "difference",
       }}
       className="hidden sm:block fixed top-0 left-0 pointer-events-none z-[9999]"
