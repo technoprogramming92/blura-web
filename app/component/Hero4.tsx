@@ -199,7 +199,7 @@ export default function Hero4() {
           <div className="flex animate-marquee whitespace-nowrap">
             {/* Duplicate the content twice for seamless looping */}
             {[...Array(2)].map((_, loopIndex) => (
-              <div key={loopIndex} className="flex gap-12 py-4 px-6 shrink-0">
+              <div key={loopIndex} className="flex gap-2 py-4 px-6 shrink-0">
                 {Array.from({ length: 12 }).map((_, i) => (
                   <div
                     key={`${loopIndex}-${i}`}
@@ -207,13 +207,13 @@ export default function Hero4() {
                   >
                     <span>A Moment Of Clarity In a Chaotic World</span>
                     <div
-                      className="w-6 h-6 bg-cover bg-no-repeat"
+                      className="w-3 h-3 bg-cover bg-no-repeat"
                       style={{
-                        backgroundImage: `url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-08-21/${[
-                            "V64XdgD2CL.png",
-                            "NT6M5XPjxy.png",
-                            "AhT98fD6qs.png",
-                            "thqYuzu7qL.png",
+                        backgroundImage: `url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-08-25/${[
+                            "OX6PxTDEen.png",
+                            "OX6PxTDEen.png",
+                            "OX6PxTDEen.png",
+                            "OX6PxTDEen.png",
                           ][i % 4]
                           })`,
                       }}
