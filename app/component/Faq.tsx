@@ -84,7 +84,7 @@ export default function Faq() {
       <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-12">
         {/* Left Title */}
         <div className="flex-1" ref={titleRef}>
-          <h2 className="font-['Frank_Ruhl_Libre'] text-3xl sm:text-4xl lg:text-5xl font-bold text-black leading-tight">
+          <h2 className="font-['Frank_Ruhl_Libre'] text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight text-[#071f43]">
             Answers, as Clear as Blüra Water
           </h2>
         </div>

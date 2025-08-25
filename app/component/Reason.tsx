@@ -68,7 +68,8 @@ export default function Reason() {
           ref={textRef}
           className="flex flex-col gap-5 lg:gap-[20px] w-full max-w-[758px]"
         >
-          <h2 className="font-['Frank_Ruhl_Libre'] text-3xl sm:text-4xl lg:text-[54px] font-medium leading-tight lg:leading-[65.88px] text-black text-left">
+          <h2 className="font-['Frank_Ruhl_Libre'] text-3xl sm:text-4xl lg:text-[54px] font-medium leading-tight lg:leading-[65.88px] text-left
+          text-[#071f43]">
             Cans for a Reason
           </h2>
           <p className="font-['Frank_Ruhl_Libre'] text-sm sm:text-base lg:text-[18px] font-light leading-relaxed text-black text-left">

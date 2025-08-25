@@ -54,7 +54,7 @@ export default function Benefits() {
   return (
     <section className="w-full bg-white py-16 px-6">
       {/* Heading */}
-      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-center mb-12 font-['Frank_Ruhl_Libre']">
+      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-center mb-12 font-['Frank_Ruhl_Libre'] text-[#071f43]">
         Benefits of Drinking blüra Water
       </h2>
 
