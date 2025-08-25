@@ -46,7 +46,7 @@ export default function HeroImageGSAP() {
   return (
     <div
       ref={wrapRef}
-      className="order-2 lg:order-2 w-full lg:w-[560px] h-[400px] lg:h-[634px] 
+      className="order-2 lg:order-2 w-full lg:w-[560px] h-[400px] lg:h-[550px] 
                  overflow-hidden lg:self-end lg:translate-y-12 z-0"
     >
       <img

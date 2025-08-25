@@ -94,9 +94,12 @@ export default function Hero4() {
   return (
     <section className="w-full bg-white overflow-hidden">
       {/* <div className="max-w-[1460px] relative mx-auto flex flex-col lg:flex-row items-center justify-between px-6 lg:px-12
-      bg-[url('/mountains.png')] bg-cover bg-center"> */}
+      bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-08-25/xm3Q7bxtLO.png)] bg-cover bg-center"> */}
+      {/* <div className="main-container w-[1460px] h-[592px] relative mx-auto my-0"> */}
+      {/* <div className="w-[1460px] h-[586px] bg-[#fff] relative mt-0 mr-0 mb-0 ml-0" /> */}
+      <div className="w-full h-[361px] bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-08-25/xm3Q7bxtLO.png)] bg-cover bg-no-repeat absolute top-[200px] left-0 overflow-hidden" />
+    {/* </div> */}
       <div className="max-w-[1460px] mx-auto flex flex-col lg:flex-row items-center justify-between px-6 lg:px-12
-        bg-[url('https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-08-23/SJkjhQ296K.png')] 
         bg-cover bg-no-repeat bg-[center_calc(40%-30px)] relative my-0">
         {/* Right Image (order 1 in mobile, stays right in desktop) */}
         {/* <div className="order-2 lg:order-2 w-full lg:w-[560px] h-[400px] lg:h-[634px] bg-[url('https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-08-21/NE1XZKpKVi.png')] bg-cover bg-no-repeat lg:self-end lg:translate-y-12 z-0" /> */}
