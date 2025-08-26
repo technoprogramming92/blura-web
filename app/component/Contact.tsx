@@ -157,14 +157,18 @@ export default function Contact() {
         <div className="flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto justify-center">
           <span className="font-['Frank_Ruhl_Libre'] font-['Frank_Ruhl_Libre'] text-sm">Follow us:</span>
           <div className="flex gap-4">
-            <a href="#">
-              <div className="w-5 h-5 bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-08-21/SNH4g6c2xs.png)] bg-cover" />
-            </a>
             <a href="https://www.instagram.com/bluraofficial/" target="_blank" rel="noopener noreferrer">
               <div className="w-5 h-5 bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-08-21/CnuVmABEOQ.png)] bg-cover" />
             </a>
             <a href="#">
               <div className="w-5 h-5 bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-08-21/SFavkccuQP.png)] bg-cover" />
+            </a>
+            <a href="https://www.linkedin.com/company/bluralife/" target="_blank" rel="noopener noreferrer">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
+                alt="LinkedIn"
+                class="w-5 h-5"
+              />
             </a>
           </div>
         </div>

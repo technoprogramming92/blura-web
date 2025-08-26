@@ -14,7 +14,7 @@ export default function Hero4() {
       bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-08-25/xm3Q7bxtLO.png)] bg-cover bg-center"> */}
       {/* <div className="main-container w-[1460px] h-[592px] relative mx-auto my-0"> */}
       {/* <div className="w-[1460px] h-[586px] bg-[#fff] relative mt-0 mr-0 mb-0 ml-0" /> */}
-      <div className="w-full h-[361px] bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-08-25/xm3Q7bxtLO.png)] bg-cover bg-no-repeat absolute top-[200px] left-0 overflow-hidden" />
+      <div className="w-full h-[450px] bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-08-26/rKtrdcdbYU.png)] bg-cover bg-no-repeat absolute top-[100px] left-0 overflow-hidden" />
     {/* </div> */}
       <div className="max-w-[1460px] mx-auto flex flex-col lg:flex-row items-center justify-between px-6 lg:px-12
         bg-cover bg-no-repeat bg-[center_calc(40%-30px)] relative my-0">
