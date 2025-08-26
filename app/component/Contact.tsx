@@ -63,7 +63,7 @@ export default function Contact() {
           <h2 className="font-['Frank_Ruhl_Libre'] text-3xl sm:text-4xl font-bold capitalize">
             be a blüra being
           </h2>
-          <p className="text-sm sm:text-base font-light leading-relaxed">
+          <p className="font-['Frank_Ruhl_Libre'] text-sm sm:text-base font-light leading-relaxed">
             blüra is our answer to your luxury that doesn’t come at a planetary
             cost. It’s a brand built on transparency and taste. A chilled can
             against your palm. The first sip. The sudden pause inside you.
@@ -76,11 +76,11 @@ export default function Contact() {
           <div className="flex flex-col gap-4">
             <div className="flex gap-3 items-center">
               <div className="w-5 h-5 bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-08-21/CK6SNG0NLD.png)] bg-cover bg-no-repeat" />
-              <span>754568953</span>
+              <span className="font-['Frank_Ruhl_Libre']">+91- 7990394138</span>
             </div>
             <div className="flex gap-3 items-center">
               <div className="w-5 h-5 bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-08-21/WF6wqEaxAH.png)] bg-cover bg-no-repeat" />
-              <span>johndeo@yopmail.com</span>
+              <span className="font-['Frank_Ruhl_Libre']">contact@bluralife.com</span>
             </div>
           </div>
         </div>
@@ -90,10 +90,10 @@ export default function Contact() {
           ref={rightRef}
           className="bg-white px-6 sm:px-12 lg:px-24 py-12 flex-1"
         >
-          <h3 className="text-2xl font-['Frank_Ruhl_Libre'] mb-2">
+          <h3 className="font-['Frank_Ruhl_Libre'] text-2xl font-['Frank_Ruhl_Libre'] mb-2">
             Have Questions? Let’s Connect!
           </h3>
-          <p className="text-gray-700 mb-6">
+          <p className="font-['Frank_Ruhl_Libre'] text-gray-700 mb-6">
             We’re here to help - reach out to learn more
           </p>
 
@@ -102,20 +102,20 @@ export default function Contact() {
               <input
                 type="text"
                 placeholder="First Name"
-                className="flex-1 border-b border-black px-2 py-2 outline-none"
+                className="font-['Frank_Ruhl_Libre'] flex-1 border-b border-black px-2 py-2 outline-none"
               />
               <input
                 type="email"
                 placeholder="Email Address"
-                className="flex-1 border-b border-black px-2 py-2 outline-none"
+                className="font-['Frank_Ruhl_Libre'] flex-1 border-b border-black px-2 py-2 outline-none"
               />
             </div>
             <input
               type="tel"
               placeholder="Phone Number"
-              className="border-b border-black px-2 py-2 outline-none"
+              className="font-['Frank_Ruhl_Libre'] border-b border-black px-2 py-2 outline-none"
             />
-            <select className="border-b border-black px-2 py-2 outline-none">
+            <select className="font-['Frank_Ruhl_Libre'] border-b border-black px-2 py-2 outline-none">
               <option>Select Business</option>
               <option>B2B</option>
               <option>B2C</option>
@@ -123,11 +123,11 @@ export default function Contact() {
             <textarea
               placeholder="Write your message..."
               rows={3}
-              className="border-b border-black px-2 py-2 outline-none"
+              className="font-['Frank_Ruhl_Libre'] border-b border-black px-2 py-2 outline-none"
             />
             <button
               type="submit"
-              className="self-start w-fit inline-flex px-6 py-3 bg-[#071f43] text-white font-['Frank_Ruhl_Libre'] text-[16px] font-semibold shadow border border-transparent transition duration-300 hover:bg-transparent hover:text-[#071f43] hover:border-[#071f43] cursor-pointer"
+              className="font-['Frank_Ruhl_Libre'] self-start w-fit inline-flex px-6 py-3 bg-[#071f43] text-white font-['Frank_Ruhl_Libre'] text-[16px] font-semibold shadow border border-transparent transition duration-300 hover:bg-transparent hover:text-[#071f43] hover:border-[#071f43] cursor-pointer"
             >
               Contact Us Now
             </button>
@@ -149,12 +149,12 @@ export default function Contact() {
         </div>
         {/* Center Social */}
         <div className="flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto justify-center">
-          <span className="text-sm">Follow us:</span>
+          <span className="font-['Frank_Ruhl_Libre'] font-['Frank_Ruhl_Libre'] text-sm">Follow us:</span>
           <div className="flex gap-4">
             <a href="#">
               <div className="w-5 h-5 bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-08-21/SNH4g6c2xs.png)] bg-cover" />
             </a>
-            <a href="#">
+            <a href="https://www.instagram.com/bluraofficial/" target="_blank" rel="noopener noreferrer">
               <div className="w-5 h-5 bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-08-21/CnuVmABEOQ.png)] bg-cover" />
             </a>
             <a href="#">
@@ -164,10 +164,10 @@ export default function Contact() {
         </div>
         {/* Right Links */}
         <div className="flex gap-8 w-full sm:w-auto justify-center sm:justify-end">
-          <a href="#" className="text-sm">
+          <a href="#" className="font-['Frank_Ruhl_Libre'] text-sm">
             Terms & Conditions
           </a>
-          <a href="#" className="text-sm">
+          <a href="#" className="font-['Frank_Ruhl_Libre'] text-sm">
             Privacy Policy
           </a>
         </div>

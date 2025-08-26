@@ -39,7 +39,7 @@ export default function Shape() {
       id="our-story"
       ref={sectionRef}
     >
-      <div className="max-w-[1276px] mx-auto bg-[#071f43] rounded-lg px-6 sm:px-12 lg:px-[91px] py-12 flex flex-col gap-6">
+      <div className="max-w-[1276px] mx-auto bg-[#071f43] px-6 sm:px-12 lg:px-[91px] py-12 flex flex-col gap-6">
         {/* Title */}
         <h2 className="font-['Frank_Ruhl_Libre'] text-3xl sm:text-4xl lg:text-[54px] font-medium leading-tight text-white text-center">
           How Blüra Took Shape
@@ -55,18 +55,22 @@ export default function Shape() {
           It all started with a simple truth: water is the most essential thing
           we consume, and we are consuming it in the most harmful way. Mountains
           of plastic waste, microplastics invading our bodies, and a planet
-          begging for a timeout. It was time to change the flow.
+          begging for a timeout. 
           <br />
           <br />
-          And we listened. We chose Truth over Trends.
+          <p className="font-['Frank_Ruhl_Libre'] text-base sm:text-lg lg:text-[18px] font-semibold text-white text-center">It was time to change the flow.</p>
+          <p className="font-['Frank_Ruhl_Libre'] text-base sm:text-lg lg:text-[18px] font-semibold text-white text-center">And we listened. We chose Truth over Trends.</p>
           <br />
           We ventured to the Himalayan foothills, where the air is thinner, the
           thoughts are clearer, and the water, wiser. blüra is a whisper from
           the mountains. Drawn from ancient Himalayas, it is a mineral-rich,
           naturally filtered water that flows through Himalayan rocks,
-          containing elements such as calcium, magnesium, and bicarbonates, that
-          not only hydrate but also revitalise. No chemicals. No gimmicks. Just
-          the earth&apos;s wisdom in a Can.
+          containing elements such as 
+          <span className="font-['Frank_Ruhl_Libre'] text-base sm:text-lg lg:text-[18px] font-semibold text-white text-center"> Calcium, Magnesium, and Bicarbonates</span>, that
+          not only hydrate but also revitalise. 
+          <br />
+          <p className="font-['Frank_Ruhl_Libre'] text-base sm:text-lg lg:text-[18px] font-semibold text-white text-center">No chemicals. No gimmicks. Just
+          the earth&apos;s wisdom in a Can.</p>
         </p>
       </div>
     </section>

@@ -8,89 +8,6 @@ import HeroImg from "./HeroImg";
 export default function Hero4() {
   const words = ["STILLNESS", "NATURE", "YOU"];
 
-  useEffect(() => {
-    const wordElement = document.getElementById("changing-word");
-    let index = 0;
-    let interval: NodeJS.Timeout | null = null;
-
-    const typeWord = (word: string) => {
-      if (!wordElement) return;
-      wordElement.textContent = "";
-
-      const letters = word.split("");
-      letters.forEach((letter, i) => {
-        gsap.to({}, {
-          delay: i * 0.08,
-          onComplete: () => {
-            if (wordElement) {
-              wordElement.textContent += letter;
-            }
-          }
-        });
-      });
-    };
-
-    const eraseWord = (callback: () => void) => {
-      if (!wordElement) return;
-      const currentText = wordElement.textContent || "";
-      const letters = currentText.split("");
-
-      letters.forEach((_, i) => {
-        gsap.to({}, {
-          delay: i * 0.05,
-          onComplete: () => {
-            if (wordElement) {
-              wordElement.textContent = currentText.slice(0, letters.length - i - 1);
-            }
-            if (i === letters.length - 1 && callback) {
-              callback();
-            }
-          }
-        });
-      });
-    };
-
-    const changeWord = () => {
-      eraseWord(() => {
-        index = (index + 1) % words.length;
-        typeWord(words[index]);
-      });
-    };
-
-    const startInterval = () => {
-      if (!interval) {
-        interval = setInterval(changeWord, 4000);
-      }
-    };
-
-    const clearExistingInterval = () => {
-      if (interval) {
-        clearInterval(interval);
-        interval = null;
-      }
-    };
-
-    const handleVisibilityChange = () => {
-      if (document.visibilityState === "visible") {
-        startInterval();
-      } else {
-        clearExistingInterval();
-      }
-    };
-
-    // Initial run
-    typeWord(words[index]);
-    startInterval();
-
-    // Listen to tab visibility changes
-    document.addEventListener("visibilitychange", handleVisibilityChange);
-
-    return () => {
-      clearExistingInterval();
-      document.removeEventListener("visibilitychange", handleVisibilityChange);
-    };
-  }, []);
-
   return (
     <section className="w-full bg-white overflow-hidden">
       {/* <div className="max-w-[1460px] relative mx-auto flex flex-col lg:flex-row items-center justify-between px-6 lg:px-12
@@ -110,7 +27,7 @@ export default function Hero4() {
         /> */}
         <HeroImg />
         {/* Left Content (order 2 in mobile) */}
-        <div className="order-1 lg:order-1 flex flex-col gap-8 items-start max-w-[735px] mt-10 lg:mt-0 lg:pr-12">
+        <div className="order-1 lg:order-1 flex flex-col gap-8 items-start max-w-[735px] mt-10 lg:mt-0 lg:pr-2">
           <h1
             data-hover-effect
             className="font-['Frank_Ruhl_Libre'] text-[26px] sm:text-[26px] lg:text-[30px] font-semibold leading-snug text-[#071f43] -mb-8"
@@ -125,13 +42,13 @@ export default function Hero4() {
           </h1> */}
 
           <h1 className="font-['Frank_Ruhl_Libre'] text-[26px] sm:text-[32px] lg:text-[40px] font-semibold leading-snug text-[#071f43] flex items-center gap-2">
-            TO <span id="changing-word" className="inline-block"></span>
+            TO STILLNESS, TO NATURE, TO YOU.
             {/* <span className="blinking-cursor">|</span> */}
           </h1>
 
           <p
             data-hover-effect
-            className="text-[16px] sm:text-[18px] font-light leading-7 text-gray-600"
+            className="font-['Frank_Ruhl_Libre'] text-[16px] sm:text-[18px] font-light leading-7 text-gray-600"
           >
             Premium natural mineral water sourced from the Himalayan foothills,
             sealed in sleek, sustainable aluminium cans.

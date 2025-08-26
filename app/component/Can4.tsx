@@ -53,7 +53,7 @@ export default function CanBafore() {
         tl.from(words, {
           opacity: 0,
           y: 30,
-          duration: 0.6,
+          duration: 0.2,
           stagger: 0.2,
           ease: "power3.out",
         }).from(
@@ -93,11 +93,12 @@ export default function CanBafore() {
           ref={headingRef}
           className="h-auto self-stretch shrink-0 basis-auto font-['Frank_Ruhl_Libre'] text-[24px] md:text-[36px] lg:text-[48px] xl:text-[54px] font-normal leading-[30px] md:leading-[46px] lg:leading-[62px] xl:leading-[70px] text-[#fff] relative text-center whitespace-nowrap z-[1]"
         >
-          {headingText.map((word, i) => (
+          The Beauty of Blüra Water 
+          {/* {headingText.map((word, i) => (
             <span key={i} className="inline-block mr-2">
               {word}
             </span>
-          ))}
+          ))} */}
         </span>
         <div
           ref={paraRef}
@@ -108,9 +109,16 @@ export default function CanBafore() {
           </span>
           <span className="font-['Frank_Ruhl_Libre'] text-[14px] md:text-[16px] lg:text-[18px] font-light leading-[18px] md:leading-[20px] lg:leading-[22.68px] text-[#fff] relative text-center">
             blüra doesn&apos;t shock your tongue or leave an afterthought. It
-            simply disappears, as if it were always part of you. It nourishes
-            without asking for attention. No artificial mineral addition, free
-            of impurities, blüra is natural alkaline water that is soft on the
+            simply disappears, 
+            <br />
+            as if it were always part of you. It nourishes
+            without asking for attention. 
+            <br />
+            No artificial mineral addition, free
+            of impurities,
+            <br />
+            blüra is natural alkaline water that is soft on the
+            <br />
             palate and gentle on your body.
           </span>
         </div>

@@ -9,7 +9,7 @@ export default function Benefits() {
   const benefits = [
     {
       title: "Balances Your Body's pH",
-      desc: "With a natural pH of 7-8, BLÜRA helps neutralise acidity",
+      desc: "With a natural pH of 7-8, blüra helps neutralize acidity and supports better digestion.",
       icon: "https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-08-21/JZfxUgA2iq.png",
     },
     {
@@ -18,8 +18,8 @@ export default function Benefits() {
       icon: "https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-08-21/cQxrA5nM87.png",
     },
     {
-      title: "Boosts Skin & Detox",
-      desc: "Flushes toxins, supports organ function, and promotes a healthier glow.",
+      title: "100% Natural, Zero Processing",
+      desc: "No additives, no chemical treatment- just water as nature intended.",
       icon: "https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-08-21/8rCYY45kTQ.png",
     },
     {
@@ -66,17 +66,17 @@ export default function Benefits() {
             ref={(el) => {
               if (el) cardsRef.current[i] = el;
             }}
-            className="group bg-white rounded-xl shadow-md hover:shadow-lg transition p-6 flex flex-col gap-4 hover:bg-[#071f43] cursor-pointer opacity-0"
+            className="group bg-white shadow-md hover:shadow-lg transition p-6 flex flex-col gap-4 hover:bg-[#071f43] cursor-pointer opacity-0"
           >
             <img
               src={item.icon}
               alt={item.title}
               className="w-[55px] h-[55px] transition duration-300 group-hover:invert group-hover:brightness-0"
             />
-            <h3 className="text-lg font-semibold text-gray-900 group-hover:text-white transition">
+            <h3 className="font-['Frank_Ruhl_Libre'] text-lg font-semibold text-gray-900 group-hover:text-white transition">
               {item.title}
             </h3>
-            <p className="text-gray-600 text-sm leading-relaxed group-hover:text-white transition">
+            <p className="font-['Frank_Ruhl_Libre'] text-gray-600 text-sm leading-relaxed group-hover:text-white transition">
               {item.desc}
             </p>
           </div>

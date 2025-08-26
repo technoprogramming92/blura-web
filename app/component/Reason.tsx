@@ -60,7 +60,7 @@ export default function Reason() {
         {/* Left Image */}
         <div
           ref={imgRef}
-          className="w-full max-w-[321px] h-[320px] sm:h-[400px] lg:h-[482px] bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-08-21/bOwGUgKDbZ.png)] bg-cover bg-no-repeat rounded-md flex-shrink-0"
+          className="w-full max-w-[321px] h-[320px] sm:h-[400px] lg:h-[482px] bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-08-21/bOwGUgKDbZ.png)] bg-cover bg-no-repeat flex-shrink-0"
         />
 
         {/* Right Content */}
@@ -84,7 +84,7 @@ export default function Reason() {
             cans are infinitely recyclable, travel safer, better for the earth,
             and cooler to hold. Unlike plastic, the water tastes better too. No
             leaching. No odour. And most importantly, it matches your belief and
-            Elevate Yourself!
+            <span className="font-['Frank_Ruhl_Libre'] text-base sm:text-lg lg:text-[18px] font-semibold text-black text-center"> Elevate Yourself!</span>
           </p>
         </div>
       </div>
