@@ -90,7 +90,7 @@ export default function Home() {
       {/* <Cursor7 /> */}
       <Cursor8 />
 
-      {/* cursor number 5,7 and 8 working. */}
+      {/* cursor number 5,7 and 8 working */}
     </div>
   );
 }
