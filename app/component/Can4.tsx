@@ -127,12 +127,12 @@ export default function CanBafore() {
       {/* Image 1 */}
       <div
         ref={img1Ref}
-        className="w-[40.45%] h-[220px] md:h-[320px] lg:h-[440px] xl:h-[521.667px] shrink-0 bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-08-21/zPvJ0zWqvS.png)] bg-contain bg-center bg-no-repeat absolute top-[90px] md:top-[140px] lg:top-[190px] xl:top-[227px] left-[68.18%] z-[4]"
+        className="w-[40.45%] h-[220px] md:h-[320px] lg:h-[440px] shrink-0 bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-08-21/zPvJ0zWqvS.png)] bg-contain bg-center bg-no-repeat absolute top-[90px] md:top-[140px] lg:top-[190px] left-[65.18%] z-[4]"
       />
       {/* Image 2 */}
       <div
         ref={img2Ref}
-        className="w-[32.84%] h-[200px] md:h-[300px] lg:h-[400px] xl:h-[484.686px] shrink-0 bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-08-21/VV84h7H9c8.png)] bg-contain bg-center bg-no-repeat absolute top-[100px] md:top-[150px] lg:top-[200px] xl:top-[246px] left-[-1.49%] z-[3]"
+        className="w-[32.84%] h-[200px] md:h-[300px] lg:h-[400px] shrink-0 bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-08-21/VV84h7H9c8.png)] bg-contain bg-center bg-no-repeat absolute top-[100px] md:top-[150px] lg:top-[200px] left-[-1.49%] z-[3]"
       />
     </div>
   );
