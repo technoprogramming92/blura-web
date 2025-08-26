@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
@@ -10,6 +10,9 @@ export default function Contact() {
   const sectionRef = useRef<HTMLDivElement | null>(null);
   const leftRef = useRef<HTMLDivElement | null>(null);
   const rightRef = useRef<HTMLDivElement | null>(null);
+  const [openTerms, setOpenTerms] = useState(false);
+  const [openPrivacy, setOpenPrivacy] = useState(false);
+
 
   useEffect(() => {
     if (!sectionRef.current) return;
@@ -90,7 +93,7 @@ export default function Contact() {
           ref={rightRef}
           className="bg-white px-6 sm:px-12 lg:px-24 py-12 flex-1"
         >
-          <h3 className="font-['Frank_Ruhl_Libre'] text-2xl font-['Frank_Ruhl_Libre'] mb-2">
+          <h3 className="font-['Frank_Ruhl_Libre'] text-3xl sm:text-4xl font-['Frank_Ruhl_Libre'] mb-2">
             Have Questions? Let’s Connect!
           </h3>
           <p className="font-['Frank_Ruhl_Libre'] text-gray-700 mb-6">
@@ -117,8 +120,11 @@ export default function Contact() {
             />
             <select className="font-['Frank_Ruhl_Libre'] border-b border-black px-2 py-2 outline-none">
               <option>Select Business</option>
-              <option>B2B</option>
-              <option>B2C</option>
+              <option>Cafe</option>
+              <option>Hotels</option>
+              <option>Retailers</option>
+              <option>Event organizers</option>
+              <option>Distributor</option>
             </select>
             <textarea
               placeholder="Write your message..."
@@ -164,14 +170,79 @@ export default function Contact() {
         </div>
         {/* Right Links */}
         <div className="flex gap-8 w-full sm:w-auto justify-center sm:justify-end">
-          <a href="#" className="font-['Frank_Ruhl_Libre'] text-sm">
+          <a href="#" className="font-['Frank_Ruhl_Libre'] text-sm" onClick={() => setOpenTerms(true)}>
             Terms & Conditions
           </a>
-          <a href="#" className="font-['Frank_Ruhl_Libre'] text-sm">
+          <a href="#" className="font-['Frank_Ruhl_Libre'] text-sm" onClick={() => setOpenPrivacy(true)}>
             Privacy Policy
           </a>
         </div>
       </div>
+
+      {openTerms && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/30 backdrop-blur-sm">
+          <div className="bg-white rounded-2xl shadow-xl p-6 max-w-xl w-full relative">
+            <button
+              onClick={() => setOpenTerms(false)}
+              className="absolute top-3 right-3 text-gray-600 hover:text-black text-xl"
+            >
+              ✕
+            </button>
+            <h2 className="text-2xl font-bold mb-4 font-['Frank_Ruhl_Libre']">
+              Terms & Conditions
+            </h2>
+            <div className="text-sm font-['Frank_Ruhl_Libre'] leading-relaxed text-gray-700 max-h-80 overflow-y-auto space-y-4">
+              <p>
+                Welcome to Blüra’s official website. By browsing this site, you agree to the following terms:
+              </p>
+              <p>
+                <strong>Content Ownership:</strong> All text, images, and logos are the property of Blüra and may not be copied or used without written permission.
+              </p>
+              <p>
+                <strong>Informational Purpose:</strong> The content on this site is for general information about Blüra and our products. It does not constitute advice.
+              </p>
+              <p>
+                <strong>Accuracy:</strong> We strive for accuracy but do not guarantee that all information is free from errors.
+              </p>
+              <p>
+                <strong>External Links:</strong> We are not responsible for the content of any external sites we link to.
+              </p>
+              <p>
+                If you disagree with these terms, please do not use this website.
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Privacy Policy Modal */}
+      {openPrivacy && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/30 backdrop-blur-sm">
+          <div className="bg-white rounded-2xl shadow-lg p-6 max-w-lg w-full relative">
+            <button
+              onClick={() => setOpenPrivacy(false)}
+              className="absolute top-3 right-3 text-gray-600 hover:text-black text-xl"
+            >
+              ✕
+            </button>
+            <h2 className="text-2xl font-bold mb-4 font-['Frank_Ruhl_Libre']">
+              Privacy Policy
+            </h2>
+            <div className="font-['Frank_Ruhl_Libre'] text-sm leading-relaxed text-gray-700 max-h-80 overflow-y-auto space-y-4">
+              <p>Blüra respects your privacy. We do not sell, rent, or trade your personal information.</p>
+              <p>Any details you share through our contact form, email, or social media are used only to respond to your inquiries or share information you’ve requested.</p>
+              <p>We may use website analytics (such as Google Analytics) to understand visitor interactions and improve our site. These tools may use cookies, which you can disable in your browser settings.</p>
+              <p>
+                By using our website, you agree to this policy. If you have questions, write to us at{" "}
+                <span className="font-['Frank_Ruhl_Libre'] text-base sm:text-lg lg:text-[18px] font-semibold text-black text-center">
+                  contact@bluralife.com.
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
+
     </section>
   );
 }

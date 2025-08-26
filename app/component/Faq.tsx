@@ -91,6 +91,7 @@ export default function Faq() {
           <h2 className="font-['Frank_Ruhl_Libre'] text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight text-[#071f43]">
             Answers, as Clear as Blüra Water
           </h2>
+          <br />
           <p className="font-['Frank_Ruhl_Libre'] text-sm sm:text-base font-light leading-relaxed">
             Every sip of blüra means purity, which flows 
             as freely as our water. 
