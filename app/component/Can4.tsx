@@ -54,12 +54,12 @@ export default function CanBafore() {
           opacity: 0,
           y: 30,
           duration: 0.2,
-          stagger: 0.2,
+          stagger: 0,
           ease: "power3.out",
         }).from(
           paraRef.current,
           { opacity: 0, y: 20, duration: 1 },
-          "-=0.2"
+          "-=0"
         );
 
         
