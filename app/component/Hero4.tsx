@@ -41,7 +41,7 @@ export default function Hero4() {
             TO STILLNESS, TO NATURE, TO YOU.
           </h1> */}
 
-          <h1 className="font-['Frank_Ruhl_Libre'] text-[26px] sm:text-[32px] lg:text-[40px] font-semibold leading-snug text-[#071f43] flex items-center gap-2">
+          <h1 className="font-['Frank_Ruhl_Libre'] text-[26px] sm:text-[32px] lg:text-[36px] font-semibold leading-snug text-[#071f43] flex items-center gap-2">
             TO STILLNESS, TO NATURE, TO YOU.
             {/* <span className="blinking-cursor">|</span> */}
           </h1>
