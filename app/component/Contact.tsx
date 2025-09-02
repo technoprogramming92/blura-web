@@ -160,7 +160,7 @@ export default function Contact() {
             <a href="https://www.instagram.com/bluraofficial/" target="_blank" rel="noopener noreferrer">
               <div className="w-5 h-5 bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-08-21/CnuVmABEOQ.png)] bg-cover" />
             </a>
-            <a href="#">
+            <a href="https://wa.me/message/5LPLNODKABRVO1" target="_blank" rel="noopener noreferrer">
               <div className="w-5 h-5 bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-08-21/SFavkccuQP.png)] bg-cover" />
             </a>
             <a href="https://www.linkedin.com/company/bluralife/" target="_blank" rel="noopener noreferrer">
