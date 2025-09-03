@@ -101,7 +101,7 @@ export default function CanBafore() {
           ))} */}
         </span>
         <div
-          ref={paraRef}
+          
           className="w-full max-w-[1276px] shrink-0 font-['Plus_Jakarta_Sans'] text-[14px] md:text-[16px] lg:text-[18px] font-bold leading-[18px] md:leading-[20px] lg:leading-[22.68px] relative text-center z-[2]"
         >
           <span className="font-['Frank_Ruhl_Libre'] text-[14px] md:text-[16px] lg:text-[18px] font-bold leading-[18px] md:leading-[20px] lg:leading-[22.68px] text-[#fff] relative text-center">
