@@ -44,10 +44,10 @@ export default function Contact() {
 
     emailjs
       .sendForm(
-        "service_5ybyp9l",   // replace with EmailJS service ID
-        "template_vrl9c35",  // replace with EmailJS template ID
+        "",   // replace with EmailJS service ID
+        "",  // replace with EmailJS template ID
         formRef.current,
-        "5d6_YymJjL5F0UjKo"    // replace with EmailJS public key
+        ""    // replace with EmailJS public key
       )
       .then(
         () => {
