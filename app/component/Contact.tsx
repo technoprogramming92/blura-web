@@ -72,8 +72,25 @@ export default function Contact() {
         <div ref={leftRef} className="bg-[#071f43] text-white px-6 sm:px-12 lg:px-24 py-12 flex-1 flex flex-col gap-6">
           <h2 className="font-['Frank_Ruhl_Libre'] text-3xl sm:text-4xl font-bold capitalize">be a blüra being</h2>
           <p className="font-['Frank_Ruhl_Libre'] text-sm sm:text-base font-light leading-relaxed">
-            blüra is our answer to your luxury that doesn’t come at a planetary cost...
+            blüra is our answer to your luxury that doesn’t come at a planetary
+            cost. It’s a brand built on transparency and taste. A chilled can
+            against your palm. The first sip. The sudden pause inside you.
+            That’s not hydration. That’s healing. That’s nature, grounding you
+            again. <br />
+            <br />
+            If that’s you, welcome. You’re one of us. A{" "}
+            <strong>blüra being</strong>.
           </p>
+          <div className="flex flex-col gap-4">
+            <div className="flex gap-3 items-center">
+              <div className="w-5 h-5 bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-08-21/CK6SNG0NLD.png)] bg-cover bg-no-repeat" />
+              <span className="font-['Frank_Ruhl_Libre']">+91- 7990394138</span>
+            </div>
+            <div className="flex gap-3 items-center">
+              <div className="w-5 h-5 bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-08-21/WF6wqEaxAH.png)] bg-cover bg-no-repeat" />
+              <span className="font-['Frank_Ruhl_Libre']">contact@bluralife.com</span>
+            </div>
+          </div>
         </div>
 
         {/* Right Form */}
